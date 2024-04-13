@@ -1,0 +1,5 @@
+packages/express-backend/config
+packages/express-backend/node_modules
+packages/react-frontend/node_modules
+.env
+/node_modules
