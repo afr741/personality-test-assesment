@@ -24,7 +24,7 @@ const Questionpage = () => {
     axios
       .get(`http://localhost:3001/api/questions/`)
       .then((res) => {
-        console.log("Response!", res);
+        // console.log("Response!", res);
         downloaded = res.data;
         setQuestion(downloaded);
       })

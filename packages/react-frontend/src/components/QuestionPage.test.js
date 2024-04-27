@@ -12,45 +12,41 @@ import { act } from "react-dom/test-utils";
 const server = setupServer(
   rest.get("http://localhost:3001/api/questions/", (req, res, ctx) =>
     res(
-      ctx.json({
-        data: {
-          question: [
-            {
-              number: 1,
-              question:
-                "Youre really busy at work and a colleague is telling you their life",
-              optiona: "Dont dare to interrupt them",
-              optionb:
-                "Think its more important to give them some of your time; work can",
-              optionc: "Listen, but with only with half an ear",
-              optiond:
-                "Interrupt and explain that you are really busy at the moment",
-            },
-            {
-              number: 2,
-              question:
-                "Youve been sitting in the doctors waiting room for more than 25 ",
-              optiona: "Look at your watch every two minutes",
-              optionb: "Bubble with inner anger, but keep quiet",
-              optionc:
-                "Explain to other equally impatient people in the room that the doctor",
-              optiond:
-                "Complain in a loud voice, while tapping your foot impatiently",
-            },
-            {
-              number: 3,
-              question:
-                "Youve been sitting in the doctors waiting room for more than 25 ",
-              optiona: "Look at your watch every two minutes",
-              optionb: "Bubble with inner anger, but keep quiet",
-              optionc:
-                "Explain to other equally impatient people in the room that the doctor",
-              optiond:
-                "Complain in a loud voice, while tapping your foot impatiently",
-            },
-          ],
+      ctx.json([
+        {
+          number: 1,
+          question:
+            "Youre really busy at work and a colleague is telling you their life",
+          optiona: "Dont dare to interrupt them",
+          optionb:
+            "Think its more important to give them some of your time; work can",
+          optionc: "Listen, but with only with half an ear",
+          optiond:
+            "Interrupt and explain that you are really busy at the moment",
         },
-      })
+        {
+          number: 2,
+          question:
+            "Youve been sitting in the doctors waiting room for more than 25 ",
+          optiona: "Look at your watch every two minutes",
+          optionb: "Bubble with inner anger, but keep quiet",
+          optionc:
+            "Explain to other equally impatient people in the room that the doctor",
+          optiond:
+            "Complain in a loud voice, while tapping your foot impatiently",
+        },
+        {
+          number: 3,
+          question:
+            "Youve been sitting in the doctors waiting room for more than 25 ",
+          optiona: "Look at your watch every two minutes",
+          optionb: "Bubble with inner anger, but keep quiet",
+          optionc:
+            "Explain to other equally impatient people in the room that the doctor",
+          optiond:
+            "Complain in a loud voice, while tapping your foot impatiently",
+        },
+      ])
     )
   )
 );
